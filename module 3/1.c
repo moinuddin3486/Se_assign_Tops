@@ -1,3 +1,10 @@
+/*
+Display This Information using printf
+a. Your Name
+b. Your Birth date
+c. Your Age
+d. Your Address
+*/
 #include <stdio.h>
 #include <string.h>
 int main()
