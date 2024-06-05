@@ -12,11 +12,6 @@ Ans :
 
             Abstraction: Abstraction refers to the concept of hiding the complex implementation details and showing only the essential features of the object. It allows the programmer to focus on what an object does rather than how it does it.
 
-            Regarding your question about multiple inheritance in Java:
+            multiple inheritance in Java:
 
-            No, Java does not support multiple inheritance of classes, meaning a Java class cannot directly inherit from more than one class. This decision was made to avoid the complexities and ambiguities that multiple inheritance can introduce, such as the diamond problem.
-
-            However, Java supports multiple inheritance through interfaces. A Java class can implement multiple interfaces, which allows it to inherit method signatures from multiple sources while avoiding the complications of inheriting state and implementation from multiple classes. This approach maintains the benefits of multiple inheritance while avoiding some of its pitfalls.
-
-
-
+            No, Java does not support multiple inheritance of classes
