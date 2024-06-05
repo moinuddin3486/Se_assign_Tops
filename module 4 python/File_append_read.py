@@ -3,4 +3,4 @@ file=open("demo.txt","a+")
 file.write("Python")
 file.seek(0)
 print(file.read())
-file.close
+file.close()

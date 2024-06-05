@@ -1,6 +1,5 @@
 #• What is used to check whether an object o is an instance of class A?
 class A:
-    
     print("Class A ")
 obj=A()
 

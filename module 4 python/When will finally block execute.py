@@ -6,4 +6,4 @@ try:
 except Exception as error:
     print("Exception caught : ",error)
 finally:
-    print("Finally block always execute ")
+    print("Finally block  execute ")
