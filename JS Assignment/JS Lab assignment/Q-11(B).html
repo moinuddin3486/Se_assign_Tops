@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital Clock</title>
+  <style>
+    #main {
+      /* height: 150px;
+      width: 500px; */
+      border: 2px solid bla;
+      font-size: 100px;
+      margin-left: 550px;
+      margin-top: 200px;
+      
+      /* background-color: grey; */
+    }
+    
+  </style>
+</head>
+<body>
+ 
+   <div id="main">
+    <span id="hourse"></span>:
+    <span id="minute"></span>:
+    <span id="second"></span>
+
+   </div>
+
+  <script>
+        let second=0
+        let minute=0
+        let hourse=0
+
+       
+    
+        setInterval(() => {
+            
+            // second++
+            if(second==60){
+                minute++
+                second=0
+            }
+            if(minute==60){
+                hourse++
+                minute=0
+            }
+            if(hourse==13){
+                hourse=1
+            }
+           
+            second<10?document.getElementById("second").innerHTML="0"+second++:document.getElementById("second").innerHTML=second++
+            minute<10?document.getElementById("minute").innerHTML="0"+minute:document.getElementById("minute").innerHTML=minute
+            hourse<10?document.getElementById("hourse").innerHTML="0"+hourse:document.getElementById("hourse").innerHTML=hourse
+
+        //    document.getElementById("second").innerHTML=second++
+        //    document.getElementById("hourse").innerHTML=hourse
+        //    document.getElementById("minute").innerHTML=minute
+
+        }, 1000);
+
+        
+
+
+    // }
+  </script>
+</body>
+</html>

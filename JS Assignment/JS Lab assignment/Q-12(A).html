@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Write a JavaScript program that attempts to divide a number by zero. Use trycatchto handle the error and display an appropriate error message. -->
+    <script>
+        function divide(a, b) {
+            try {
+                if (b === 0) {
+                    throw new Error("Cannot divide by zero");
+                }
+                console.log(a / b);
+            } catch (error) {
+                console.log("Error: " + error.message);
+            } finally {
+                console.log("Execution completed.");
+            }
+        }
+
+
+        divide(10, 0);
+        divide(10, 2);  
+    </script>
+</body>
+
+</html>
