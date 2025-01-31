@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Animated Slider</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+       
+        .slider {
+            width: 400px;
+            overflow: hidden;
+            border: 2px solid #333;
+            position: relative;
+        }
+
+      
+        .slides {
+            display: flex;
+            width: 1200px; 
+            transition: transform 0.5s ease-in-out;
+        }
+
+               .slides img {
+            width: 400px;
+            height: 250px;
+        }
+
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .prev { left: 10px; }
+        .next { right: 10px; }
+    </style>
+</head>
+<body>
+
+    <div class="slider">
+        <div class="slides">
+            <img src="green-background.png" alt="Slide 1">
+            <img src="images.png" alt="Slide 2">
+            <img src="red img.png" alt="Slide 3">
+        </div>
+        <button class="prev">Next</button>
+        <button class="next">prev</button>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            let currentIndex = 0;
+            let totalSlides = $(".slides img").length;
+            
+            $(".next").click(function(){
+                if (currentIndex < totalSlides - 1) {
+                    currentIndex++;
+                } else {
+                    currentIndex = 0;                 }
+                $(".slides").css("transform", "translateX(" + (-400 * currentIndex) + "px)");
+            });
+
+            $(".prev").click(function(){
+                if (currentIndex > 0) {
+                    currentIndex--;
+                } else {
+                    currentIndex = totalSlides - 1; // Loop back to the last slide
+                }
+                $(".slides").css("transform", "translateX(" + (-400 * currentIndex) + "px)");
+            });
+        });
+    </script>
+
+</body>
+</html>

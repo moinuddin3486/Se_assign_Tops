@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply CSS Using jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .highlight {
+    color: white;
+    background-color: black;
+    padding: 10px;
+}
+
+    </style>
+</head>
+
+<body>
+    <p id="text">ADd Remove Calass </p>
+<button id="AddClass">Add Class</button>
+<button id="removeClass">Remove Class</button>
+<button id="multiClass">Multi Class</button>
+
+    
+
+    <script>
+        $(document).ready(function () {
+            $("#AddClass").click(function () {
+                $("#text").addClass("highlight");
+            });
+        });
+
+        $(document).ready(function(){
+    $("#removeClass").click(function(){
+        $("#text").removeClass("highlight");
+    });
+});
+
+$(document).ready(function(){
+    $("#multiClass").click(function(){
+        $("#text").toggleClass("highlight");
+    });
+});
+
+
+    </script>
+</body>
+
+</html>
